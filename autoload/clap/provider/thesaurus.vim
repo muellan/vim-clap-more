@@ -20,6 +20,7 @@ function! s:thesaurus.source() abort
       call extend(res, map(split(substitute(l, '^\t', '', ''), ', '), {_, val -> val}))
     endif
   endfor
+  call sort(res)
   return res
 endfunction
 
