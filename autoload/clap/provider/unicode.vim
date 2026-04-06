@@ -7,6 +7,11 @@ set cpo&vim
 let s:unicode = {}
 
 
+function! IsValidCodepoint(n)
+  return a:n >= 0 && a:n <= 0x10FFFF && (a:n < 0xD800 || a:n > 0xDFFF)
+endfunction
+
+
 function! s:unicode.source() abort
   let path = ''
   if has("win32") || has("win16") || has("win64")
@@ -19,7 +24,11 @@ function! s:unicode.source() abort
   let result = []
   for row in rows
     let pieces = split(row, ';')
-    call add(result, pieces[0] . "\t" . pieces[1])
+    let code = str2nr("0x".pieces[0],16)
+    if IsValidCodepoint(code)
+        let char = nr2char(code,1)
+        call add(result, pieces[0] ."\t". char ."\t". pieces[1] ."\t". pieces[10])
+    endif
   endfor
 
   return result
