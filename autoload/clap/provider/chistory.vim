@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List quickfix list history.
 
+if exists('g:loaded_clap_provider_chistory')
+  finish
+endif
+let g:loaded_clap_provider_chistory = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List & insert unicode characters.
 
+if exists('g:loaded_clap_provider_unicode')
+  finish
+endif
+let g:loaded_clap_provider_unicode = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

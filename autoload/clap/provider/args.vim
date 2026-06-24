@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List 'args' files.
 
+if exists('g:loaded_clap_provider_args')
+  finish
+endif
+let g:loaded_clap_provider_args = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

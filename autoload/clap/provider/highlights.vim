@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List highlight groups with values & jump to definition.
 
+if exists('g:loaded_clap_provider_highlights')
+  finish
+endif
+let g:loaded_clap_provider_highlights = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

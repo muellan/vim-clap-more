@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List & execute asynchronous tasks (based on '.task' files).
 
+if exists('g:loaded_clap_provider_tasks')
+  finish
+endif
+let g:loaded_clap_provider_tasks = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

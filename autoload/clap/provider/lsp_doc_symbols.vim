@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List document symbols from LSP client https://github.com/yegappan/lsp
 
+if exists('g:loaded_clap_provider_lsp_doc_symbols')
+  finish
+endif
+let g:loaded_clap_provider_lsp_doc_symbols = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

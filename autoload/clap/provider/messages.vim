@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List recent messages.
 
+if exists('g:loaded_clap_provider_messages')
+  finish
+endif
+let g:loaded_clap_provider_messages = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

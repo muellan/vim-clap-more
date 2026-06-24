@@ -4,6 +4,11 @@
 
 vim9script
 
+if exists('g:loaded_clap_provider_lsp_connector')
+  finish
+endif
+let g:loaded_clap_provider_lsp_connector = 1
+
 if !exists('g:loaded_lsp')
     # Do not throw error as it will show up when Vim starts.
     export def GetLSPDocSymbols()

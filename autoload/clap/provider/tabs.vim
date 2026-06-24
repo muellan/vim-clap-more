@@ -1,6 +1,11 @@
 " Author: liuchengxu <xuliuchengxlc@gmail.com>
 " Description: List all tabs.
 
+if exists('g:loaded_clap_provider_tabs')
+  finish
+endif
+let g:loaded_clap_provider_tabs = 1
+
 let s:save_cpo = &cpoptions
 set cpoptions&vim
 

@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List VIM options with their values and toggle or set.
 
+if exists('g:loaded_clap_provider_options')
+  finish
+endif
+let g:loaded_clap_provider_options = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List & apply spell suggestions.
 
+if exists('g:loaded_clap_provider_spellfix')
+  finish
+endif
+let g:loaded_clap_provider_spellfix = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

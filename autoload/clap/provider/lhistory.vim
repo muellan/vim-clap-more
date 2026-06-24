@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List location list history.
 
+if exists('g:loaded_clap_provider_lhistory')
+  finish
+endif
+let g:loaded_clap_provider_lhistory = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

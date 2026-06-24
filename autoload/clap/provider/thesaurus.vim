@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List & apply thesaurus suggestions from Aiksaurus.
 
+if exists('g:loaded_clap_provider_thesaurus')
+  finish
+endif
+let g:loaded_clap_provider_thesaurus = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

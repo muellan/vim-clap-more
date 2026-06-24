@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List undo points.
 
+if exists('g:loaded_clap_provider_undo')
+  finish
+endif
+let g:loaded_clap_provider_undo = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 

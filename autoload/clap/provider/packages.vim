@@ -1,6 +1,11 @@
 " Author: André Müller (info@hackingcpp.com)
 " Description: List optional packages and packadd them.
 
+if exists('g:loaded_clap_provider_packages')
+  finish
+endif
+let g:loaded_clap_provider_packages = 1
+
 let s:cpo_save = &cpo
 set cpo&vim
 
