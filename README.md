@@ -40,6 +40,7 @@ which automatically enables the `Clap tags` provider to search LSP document symb
 | `options`    | all VIM options and their values                                                               | toggle or prompt for new value                                               |
 | `packages`   | optional VIM packages                                                                          | [`packadd`](https://vimhelp.org/repeat.txt.html#%3Apackadd) selected package |
 | `spellfix`   | spell suggestions for word under cursor (like [`z=`](https://vimhelp.org/spell.txt.html#z%3D)) | apply spell fix to word under cursor                                         |
+| `spellbad`   | misspelled words                                                                               | go to location of misspelled word                                            |
 | `tabs`       | UI tabs                                                                                        | go to tab                                                                    |
 | `undo`       | undo points from [`:undolist`](https://vimhelp.org/undo.txt.html#%3Aundolist)                  | go back to undo point                                                        |
 
